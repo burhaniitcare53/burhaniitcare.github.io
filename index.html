@@ -3,110 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burhani IT Care - Laptop Repair in Pune</title>
+    <title>Burhani IT Care - Laptop Repair Pune</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
         
+        /* Header */
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x600/1e40af/white?text=Burhani+IT+Care') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://via.placeholder.com/1920x700/1e40af/white?text=Burhani+IT+Care+Shop') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 140px 20px 80px;
+            padding: 160px 20px 100px;
         }
-        header h1 { font-size: 3.2rem; margin-bottom: 10px; }
-        header p { font-size: 1.4rem; }
+        header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.5rem; }
 
-        .nav {
+        /* Navigation */
+        nav {
             background: #0f172a;
-            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            padding: 15px 0;
         }
-        .nav ul {
-            list-style: none;
+        nav ul {
             display: flex;
             justify-content: center;
             gap: 35px;
+            list-style: none;
+            flex-wrap: wrap;
         }
-        .nav a { color: white; text-decoration: none; font-weight: 500; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-        .section { padding: 70px 20px; }
-        .container { max-width: 1200px; margin: auto; text-align: center; }
+        .section { padding: 80px 20px; }
+        .container { max-width: 1200px; margin: auto; }
 
+        h2 { text-align: center; font-size: 2.6rem; margin-bottom: 50px; color: #1e40af; }
+
+        /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            margin-top: 40px;
         }
         .service-card {
             background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
             transition: 0.3s;
         }
         .service-card:hover { transform: translateY(-10px); }
 
+        /* About & Testimonials */
+        .about { background: #f8fafc; }
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        /* Contact */
         .contact-bar {
             background: #1e40af;
             color: white;
-            padding: 30px;
-            font-size: 1.3rem;
+            text-align: center;
+            padding: 40px 20px;
         }
-        .btn {
-            background: #22c55e;
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
             color: white;
-            padding: 16px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin: 15px 10px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
         }
+
         footer { background: #0f172a; color: #ccc; text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
 
-    <nav class="nav">
+    <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header>
         <h1>Burhani IT Care</h1>
-        <p>Professional Laptop, Desktop & Printer Repair Service in Pune</p>
-        <p style="margin-top:20px;"><strong>NIBM • Kondhwa • Pune</strong></p>
-        <button class="btn" onclick="window.location.href='https://wa.me/917020388752'">📲 WhatsApp Now</button>
+        <p>Expert Laptop • Computer • Printer Repair & Service in Pune</p>
+        <p style="margin-top:20px; font-size:1.6rem;"><strong>NIBM • Kondhwa</strong></p>
     </header>
 
-    <section class="section">
+    <!-- Services -->
+    <section class="section" id="services">
         <div class="container">
-            <h2 style="font-size:2.4rem; margin-bottom:40px;">Our Services</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
-                <div class="service-card"><h3>💻 Laptop Repair</h3><p>Screen, Battery, Keyboard, Motherboard, Water Damage</p></div>
-                <div class="service-card"><h3>🖥️ Computer Repair</h3><p>Desktop, Virus Removal, Software Installation</p></div>
-                <div class="service-card"><h3>🖨️ Printer Repair</h3><p>Sales, Service & Toner Refill</p></div>
-                <div class="service-card"><h3>🔧 Data Recovery</h3><p>Hard Disk & SSD Recovery</p></div>
+                <div class="service-card"><h3>💻 Laptop Repair</h3><p>Screen, Keyboard, Battery, Motherboard, Water Damage, Overheating</p></div>
+                <div class="service-card"><h3>🖥️ Desktop & Computer Repair</h3><p>Virus Removal, Software Installation, Hardware Upgrade</p></div>
+                <div class="service-card"><h3>🖨️ Printer Repair & Sales</h3><p>All Brands - Service, Toner Refill & New Printer</p></div>
+                <div class="service-card"><h3>🔄 Data Recovery</h3><p>Hard Disk, SSD, Pen Drive Data Recovery</p></div>
             </div>
         </div>
     </section>
 
-    <div class="contact-bar">
-        📍 Shop-9, La Ventana, Opp. Sun Shree Society, NIBM Road, Kondhwa, Pune<br>
-        📞 <strong>70203 88752</strong><br><br>
-        <button class="btn" style="background:white;color:#1e40af;" onclick="window.location.href='https://wa.me/917020388752'">💬 Chat on WhatsApp</button>
-    </div>
+    <!-- About -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2>About Burhani IT Care</h2>
+            <p style="text-align:center; font-size:1.2rem; max-width:800px; margin:auto;">
+                We are a trusted laptop and computer repair service center in NIBM, Kondhwa, Pune. 
+                With years of experience, we provide fast, reliable and affordable repair services with genuine parts.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="services-grid">
+                <div class="testimonial"><p>"Very professional and honest service. Got my laptop fixed in just 2 hours!"</p><strong>- Rahul Sharma</strong></div>
+                <div class="testimonial"><p>"Best laptop repair shop in Kondhwa. Highly recommended!"</p><strong>- Priya Patil</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact + Google Map -->
+    <section class="section contact-bar" id="contact">
+        <div class="container">
+            <h2 style="color:white;">Visit Our Shop</h2>
+            <p>📍 Shop No. 9, La Ventana, Opp. Sun Shree Society,<br>NIBM Road, Kondhwa, Pune - 411048</p>
+            <p style="margin:15px 0; font-size:1.4rem;">📞 <strong>70203 88752</strong></p>
+            
+            <!-- Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5!2d73.9!3d18.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI3JzAwLjAiTiA3M8KwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1740000000000" 
+                width="100%" height="350" style="border:0; border-radius:12px; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Burhani IT Care - Laptop Service Pune | All Rights Reserved</p>
+        <p>&copy; 2026 Burhani IT Care - Laptop Repair Service in Pune | All Rights Reserved</p>
     </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/917020388752" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
